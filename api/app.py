@@ -6,13 +6,14 @@ import time
 
 app = Flask(__name__)
 
-output_columns = ['Service', 'Subscription', 'Plan', 'Car type', 'Kilometer fee', 'Minute fee', 'Fixed rate',
-                  'Overtime fee', 'Overmilage fee', 'Package fee', 'Monthly cost', 'Discount', 'Total cost']
+# output_columns = ['Service', 'Subscription', 'Plan', 'Car type', 'Kilometer fee', 'Minute fee', 'Fixed rate',
+#                   'Overtime fee', 'Overmilage fee', 'Package fee', 'Monthly cost', 'Discount', 'Total cost']
 
 
 @app.route('/time')
 def get_current_time():
-    return {'time': time.time()}
+    val = {'time': time.time()}
+    return val
 
 # @app.route("/calculator", methods=["GET", "POST"])
 # def calculator():
