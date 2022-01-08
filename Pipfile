@@ -1,0 +1,23 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+Flask = "*"
+Click = "*"
+itsdangerous = "*"
+Jinja2 = "*"
+MarkupSafe = "*"
+Werkzeug = "*"
+datetime = "*"
+pandas = "*"
+numpy = "*"
+flask_wtf = "*"
+openpyxl = "*"
+time = "*"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"
