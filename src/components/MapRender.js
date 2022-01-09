@@ -35,7 +35,8 @@ export const MyMapComponent = () => {
 
 
 const MapWrapper = () => {
-    return (<Wrapper apiKey="AIzaSyBK0f9KJULWK_BjIDVMobXDGySTWc62oSM" render={render}>
+    return (
+        <Wrapper apiKey={process.env.REACT_APP_GOOGLE_MAPS_KEY} render={render}>
             <MyMapComponent/>
         </Wrapper>)
 };

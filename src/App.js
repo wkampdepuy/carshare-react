@@ -2,21 +2,34 @@ import './App.css';
 import './bootstrap.min.css';
 import React, {useState, useEffect} from "react";
 import CalcForm from './components/CalcForm.js';
-import MapsWrapper from "./components/MapRender";
 import MapWrapper from "./components/MapRender";
-import MyMapComponent from "./components/MapRender"
 import MapForm from "./components/MapForm";
+import {Row, Col, Container} from "react-bootstrap";
 
 function App() {
     return (
         <div className="App">
-            <div>
-                <CalcForm/>
-                <MapForm/>
-                <MapWrapper/>
-                <div style={{height: "300px"}} id="map"></div>
+            <Container>
+                <Row>
+                    <Col>
+                        <Row>
+                            <div className="bg-light border rounded text-dark">
+                                <MapForm/>
+                            </div>
+                        </Row>
+                        <Row>
+                            <MapWrapper/>
 
-            </div>
+                            <div style={{height: "300px"}} id="map"></div>
+                        </Row>
+                    </Col>
+
+                    <Col>
+                        <CalcForm/>
+                    </Col>
+                </Row>
+
+            </Container>
         </div>
     );
 }

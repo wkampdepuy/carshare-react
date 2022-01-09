@@ -19,12 +19,12 @@ function MapForm() {
     }
 
     return (<Form onSubmit={handleSubmit}>
-        <FormGroup>
+        <FormGroup className="mx-5 mb-3">
             <Form.Label>Start</Form.Label>
             <Form.Control name="start" id="start" className="search_box" value={start}
                           onChange={e => setStart(e.target.value)}/>
         </FormGroup>
-        <FormGroup>
+        <FormGroup className="mx-5 mb-3">
             <Form.Label>End</Form.Label>
             <Form.Control name="end" id="end" className="search_box"
                           value={end} onChange={e => setEnd(e.target.value)}/>

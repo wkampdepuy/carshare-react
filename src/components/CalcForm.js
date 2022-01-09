@@ -3,6 +3,10 @@ import CalcTable from './CalcTable.js'
 import Button from 'react-bootstrap/Button';
 import FormGroup from 'react-bootstrap/FormGroup';
 import Form from 'react-bootstrap/Form'
+import SubmitForm from './CalcFormSubmit'
+import {Row, Col} from "react-bootstrap";
+import {InputGroup} from "react-bootstrap";
+import {FormControl} from "react-bootstrap";
 
 
 const CalcForm = () => {
@@ -29,33 +33,61 @@ const CalcForm = () => {
             body: JSON.stringify(data)
         }).then((response) => {
             response.json().then((data) => {
+                console.log(JSON.parse(data['table_json']))
                 setTable(JSON.parse(data['table_json']))
             });
         });
     }
 
+    // function handleSubmit(event) {
+    //     event.preventDefault()
+    //     // console.log(event)
+    //     SubmitForm(event)
+    // }
+
+
     return (
         <div>
             <Form onSubmit={submitForm} id='CalcForm'>
-                <FormGroup>
-                    <Form.Label>Enter distance (kilometers)</Form.Label>
-                    <Form.Control id='kilometers' type="number" defaultValue="100" onChange={e => setKilometers(e.target.value)}/>
-                </FormGroup>
-                <FormGroup>
-                    <Form.Label>Enter duration (minutes)</Form.Label>
-                    <Form.Control id='minutes' type="number" defaultValue="60" onChange={e => setMinutes(e.target.value)}/>
-                </FormGroup>
-                <FormGroup>
-                    <Form.Label>Enter frequency (per month)</Form.Label>
-                    <Form.Control id='frequency' type="number" value={frequency} onChange={e => setFrequency(e.target.value)}/>
-                </FormGroup>
-                <FormGroup>
-                    <Form.Label>Retour?</Form.Label>
-                    <Form.Check id='retour' type="checkbox" onChange={e => setRetour(e.currentTarget.checked)}/>
+
+                <FormGroup as={Row} className="mx-5 mb-3">
+                    <Form.Label column sm={2}>Distance (kilometers)</Form.Label>
+                    <Col>
+                        <FormControl min='1' id='kilometers' type="number" defaultValue="100"
+                                     onChange={e => setKilometers(e.target.value)}/>
+                    </Col>
+
                 </FormGroup>
 
-                <Button variant="primary" id='CalcFormSubmit' type="submit" value="Submit">Submit</Button>
+                <FormGroup as={Row} className="mx-5 mb-3">
+                    <Form.Label column sm={2}>Duration (minutes)</Form.Label>
+                    <Col>
+                        <Form.Control min='1' id='minutes' type="number" defaultValue="60"
+                                      onChange={e => setMinutes(e.target.value)}/>
+                    </Col>
+                </FormGroup>
 
+                <FormGroup as={Row} className="mx-5 mb-3">
+                    <Form.Label column sm={2}>Frequency (per month)</Form.Label>
+                    <Col>
+                        <Form.Control min='1' id='frequency' type="number" value={frequency}
+                                      onChange={e => setFrequency(e.target.value)}/>
+                    </Col>
+                </FormGroup>
+
+                <FormGroup as={Row} className="mx-5 mb-3">
+                    <Form.Label column sm={2}>Retour?</Form.Label>
+                    <Col>
+                        <Form.Check id='retour' type="switch"
+                                    onChange={e => setRetour(e.currentTarget.checked)}/>
+                    </Col>
+                </FormGroup>
+
+                <FormGroup as={Row} className="mx-5">
+                    <Col sm={{span: 10, offset: 2}}>
+                        <Button className="xl" variant="primary" id='CalcFormSubmit' type="submit" value="Submit">Submit</Button>
+                    </Col>
+                </FormGroup>
             </Form>
             <CalcTable json_table={table}/>
         </div>
