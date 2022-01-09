@@ -1,24 +1,22 @@
-import logo from './logo.svg';
 import './App.css';
+import './bootstrap.min.css';
 import React, {useState, useEffect} from "react";
-
+import CalcForm from './components/CalcForm.js';
+import MapsWrapper from "./components/MapRender";
+import MapWrapper from "./components/MapRender";
+import MyMapComponent from "./components/MapRender"
+import MapForm from "./components/MapForm";
 
 function App() {
-    const [currentTime, setCurrentTime] = useState(5);
-
-    useEffect(() => {
-        fetch('/time').then(res => res.json())
-            .then(data => setCurrentTime(data)).catch(error => console.log(error));
-    }, []);
-
     return (
         <div className="App">
-            <header className="App-header">
+            <div>
+                <CalcForm/>
+                <MapForm/>
+                <MapWrapper/>
+                <div style={{height: "300px"}} id="map"></div>
 
-                ... no changes in this part ...
-
-                <p>The current time is {currentTime}.</p>
-            </header>
+            </div>
         </div>
     );
 }

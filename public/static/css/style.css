@@ -1,109 +1,44 @@
-html {
-    font-family: "PublicSans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    color: #202124;
-}
+/*html {*/
+/*    font-family: "PublicSans", sans-serif;*/
+/*    font-weight: 400;*/
+/*    font-style: normal;*/
+/*    color: #202124;*/
+/*}*/
 
-body {
-    background-color: #f1f1f1;
-    font-family: Arial, Helvetica, sans-serif;
-    /*width: 100%;*/
-}
+/*body {*/
+/*    background-color: #f1f1f1;*/
+/*    font-family: Arial, Helvetica, sans-serif;*/
+/*}*/
 
-table {
-    border-collapse: separate;
-    border-spacing: 0 10px;
-    margin-top: -10px; /* correct offset on first border spacing if desired */
-}
+/*table {*/
+/*    border-collapse: separate;*/
+/*    border-spacing: 0 10px;*/
+/*    margin-top: -10px; !* correct offset on first border spacing if desired *!*/
+/*}*/
 
-td {
-    /*border: solid 1px;*/
-    border-style: solid none;
-    padding: 10px;
-}
+/*td {*/
+/*    padding: 10px;*/
+/*}*/
 
-td:first-child {
-    border-left-style: solid;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-}
+/*td:first-child {*/
+/*    border-top-left-radius: 10px;*/
+/*    border-bottom-left-radius: 10px;*/
+/*}*/
 
-td:last-child {
-    border-right-style: solid;
-    border-bottom-right-radius: 10px;
-    border-top-right-radius: 10px;
-}
+/*td:last-child {*/
+/*    border-bottom-right-radius: 10px;*/
+/*    border-top-right-radius: 10px;*/
+/*}*/
 
-th {
-    background-color: #f1f1f1;
-    border-bottom: black solid 1px
-}
+/*th {*/
+/*    background-color: #f1f1f1;*/
+/*}*/
 
-tr:first-child {
-    /*transform: scale(1.05);*/
-    background-color: #FFF6D3;
-}
+/*tr:first-child {*/
+/*    background-color: #FFF6D3;*/
+/*}*/
 
-tbody tr:hover {
-    background-color: #FFF6D3;
-    transform: scale(1.05);
-}
-
-
-.visible {
-    height: 3em;
-    width: 10em;
-    background: yellow;
-}
-
-#map {
-    /*width: 90%;*/
-    min-height: 300px;
-    /*margin: auto;*/
-    background-color: grey;
-    border-radius: 15px;
-}
-
-#maps_search_form {
-    width: 70%;
-    margin: auto;
-}
-
-.left {
-    float: left;
-    height: 500px;
-    width: 49%;
-}
-
-.right {
-    float: right;
-    height: 500px;
-    margin-bottom: 10px;
-    width: 49%;
-}
-
-@media all and (max-width: 400px) {
-    .left, .right {
-        float: none;
-        margin-bottom: 5px;
-        height: 200px;
-    }
-}
-
-
-.section__backdrop {
-    z-index: -1;
-    overflow: hidden;
-    position: absolute;
-    left: calc(max(calc(100vw - 70rem), 0px) / 2 * -1);
-    height: 80%;
-    width: 100vw;
-
-section {
-    display: flex;
-}
-
-section.hero, section.hero .section__wrapper, section.hero .section__wrapper .section__container {
-    min-height: calc(min(820px, 100vh));
-}
+/*tbody tr:hover {*/
+/*    background-color: #FFF6D3;*/
+/*    transform: scale(1.05);*/
+/*}*/
