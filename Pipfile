@@ -15,6 +15,7 @@ pandas = "*"
 numpy = "*"
 flask_wtf = "*"
 openpyxl = "*"
+gunicorn = "*"
 
 [dev-packages]
 
