@@ -49,7 +49,7 @@
   "devDependencies": {
     "eslint-plugin-react-hooks": "^4.3.0"
   },
-  "resolutions": {
+  "overrides": {
     "mini-css-extract-plugin": "2.4.5"
   }
 }
