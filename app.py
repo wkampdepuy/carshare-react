@@ -12,7 +12,7 @@ output_columns = ['Service', 'Subscription', 'Plan', 'Car type', 'Kilometer fee'
 
 @app.route('/')
 def index():
-    return render_template("public/index.html")
+    return render_template("./public/index.html")
 
 
 @app.route('/time')
