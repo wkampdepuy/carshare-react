@@ -7,11 +7,11 @@ import SubmitForm from './CalcFormSubmit'
 import {Row, Col} from "react-bootstrap";
 import {InputGroup} from "react-bootstrap";
 import {FormControl} from "react-bootstrap";
-
+import CalcCards from "./CalcCards";
 
 const CalcForm = () => {
-    const [kilometers, setKilometers] = useState(100)
-    const [minutes, setMinutes] = useState(60)
+    const [kilometers, setKilometers] = useState(78)
+    const [minutes, setMinutes] = useState(61)
     const [frequency, setFrequency] = useState(1)
     const [retour, setRetour] = useState()
     const [table, setTable] = useState([])
@@ -39,57 +39,49 @@ const CalcForm = () => {
         });
     }
 
-    // function handleSubmit(event) {
-    //     event.preventDefault()
-    //     // console.log(event)
-    //     SubmitForm(event)
-    // }
-
 
     return (
         <div>
-            <Form onSubmit={submitForm} id='CalcForm'>
+            <Form onSubmit={submitForm} >
 
-                <FormGroup as={Row} className="mx-5 mb-3">
-                    <Form.Label column sm={2}>Distance (kilometers)</Form.Label>
-                    <Col>
-                        <FormControl min='1' id='kilometers' type="number" defaultValue="100"
-                                     onChange={e => setKilometers(e.target.value)}/>
-                    </Col>
+
+                <FormGroup className="input-group p-3">
+                    <span className="input-group-addon" id="basic-addon1">Distance</span>
+                    <FormControl min='1' id='kilometers' type="number" defaultValue="78"
+                                 onChange={e => setKilometers(e.target.value)}/>
+                    <span className="input-group-addon" id="basic-addon1">kilometers</span>
+                </FormGroup>
+
+                <FormGroup className="input-group px-3 pb-3">
+                    <span className="input-group-addon" id="basic-addon1">Duration</span>
+                    <Form.Control min='1' id='minutes' type="number" defaultValue="61"
+                                  onChange={e => setMinutes(e.target.value)}/>
+                    <span className="input-group-addon" id="basic-addon1">minutes</span>
+                </FormGroup>
+
+                <FormGroup className="input-group px-3 pb-3">
+                    <span className="input-group-addon" id="basic-addon1">Frequency</span>
+                    <Form.Control min='1' id='frequency' type="number" value={frequency}
+                                  onChange={e => setFrequency(e.target.value)}/>
+                    <span className="input-group-addon" id="basic-addon1">per month</span>
+                </FormGroup>
+
+                <FormGroup className="d-flex justify-content-around align-items-center mx-5 mb-1">
+                    <Form.Label className="d-inline-flex">Return</Form.Label>
+
+                    <Form.Check id='retour' type="switch"
+                                onChange={e => setRetour(e.currentTarget.checked)}/>
+
+                    <Button className="switch xl" variant="primary" id='CalcFormSubmit' type="submit"
+                            value="Submit">Calculate</Button>
 
                 </FormGroup>
 
-                <FormGroup as={Row} className="mx-5 mb-3">
-                    <Form.Label column sm={2}>Duration (minutes)</Form.Label>
-                    <Col>
-                        <Form.Control min='1' id='minutes' type="number" defaultValue="60"
-                                      onChange={e => setMinutes(e.target.value)}/>
-                    </Col>
-                </FormGroup>
-
-                <FormGroup as={Row} className="mx-5 mb-3">
-                    <Form.Label column sm={2}>Frequency (per month)</Form.Label>
-                    <Col>
-                        <Form.Control min='1' id='frequency' type="number" value={frequency}
-                                      onChange={e => setFrequency(e.target.value)}/>
-                    </Col>
-                </FormGroup>
-
-                <FormGroup as={Row} className="mx-5 mb-3">
-                    <Form.Label column sm={2}>Retour?</Form.Label>
-                    <Col>
-                        <Form.Check id='retour' type="switch"
-                                    onChange={e => setRetour(e.currentTarget.checked)}/>
-                    </Col>
-                </FormGroup>
-
-                <FormGroup as={Row} className="mx-5">
-                    <Col sm={{span: 10, offset: 2}}>
-                        <Button className="xl" variant="primary" id='CalcFormSubmit' type="submit" value="Submit">Submit</Button>
-                    </Col>
-                </FormGroup>
             </Form>
-            <CalcTable json_table={table}/>
+            <div>
+                {/*<CalcTable json_table={table}/>*/}
+                <CalcCards json_table={table}/>
+            </div>
         </div>
     )
 }

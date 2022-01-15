@@ -1,7 +1,7 @@
 import Table from 'react-bootstrap/Table';
 
 const CalcTable = (json_table) => {
-    console.log(json_table)
+
     const array = json_table.json_table
     return (
         <div>

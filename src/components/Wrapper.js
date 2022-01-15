@@ -21,8 +21,6 @@ export default class Wrapper extends React.Component {
 
     componentDidMount() {
         const {callback, ...options} = this.props;
-        console.log(process.env.REACT_APP_GOOGLE_MAPS_KEY)
-        console.log("AIzaSyDC10_Fw-sURDOa2qhOz_qtS1yggfHdgnw")
 
         const loader = new Loader({
             apiKey: process.env.REACT_APP_GOOGLE_MAPS_KEY, version: "weekly", libraries: ["places"]
