@@ -1,1 +1,1 @@
-web: react-scripts start
+web: gunicorn app:app
