@@ -9,6 +9,9 @@ app = Flask(__name__)
 output_columns = ['Service', 'Subscription', 'Plan', 'Car type', 'Kilometer fee', 'Minute fee', 'Fixed rate',
                   'Overtime fee', 'Overmilage fee', 'Package fee', 'Monthly cost', 'Discount', 'Total cost']
 
+@app.route('/')
+def index():
+    return render_template("public/index.html")
 
 @app.route('/time')
 def get_current_time():
