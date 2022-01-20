@@ -15,12 +15,12 @@ function App() {
     return (<div className="App">
         <Navbar bg="light" expand="sm">
             <Container className='justify-content-center'>
-                <Navbar.Brand href='' className='p-1 '>
+                <Navbar.Brand href='#' className='p-1 '>
                     <a className="p-0 h-100" href="#">
                         <img src={car} className="h-100" alt=""/>
                     </a>
                 </Navbar.Brand>
-                <Navbar.Brand href='' className='m-1'>Car Share Calculator</Navbar.Brand>
+                <Navbar.Brand href='#' className='m-1'>Car Share Calculator</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav"/>
                 <div>
                     <Navbar.Collapse id="basic-navbar-nav">
