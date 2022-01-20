@@ -1,8 +1,7 @@
 import {Accordion} from "react-bootstrap";
 import {Card} from "react-bootstrap";
-import {useAccordionButton, Row, Col, Container} from "react-bootstrap";
+import {useAccordionButton, Row, Col} from "react-bootstrap";
 import NumberFormat from 'react-number-format';
-import car from "../img/car.svg";
 import React from "react";
 import sixt from '../img/sixt-vector-logo.svg'
 import sharenow from '../img/share-now-logo-vector.svg'

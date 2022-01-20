@@ -11,7 +11,7 @@ function MapAutoComplete(map) {
         item.addEventListener("places_changed", () => {
             const places = searchBox.getPlaces();
 
-            if (places.length == 0) {
+            if (places.length === 0) {
                 return;
             }
 

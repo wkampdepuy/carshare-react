@@ -2,7 +2,7 @@ import './App.css';
 import './bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
-import React, {useState, useEffect} from "react";
+import React from "react";
 import CalcForm from './components/CalcForm.js';
 import MapWrapper from "./components/MapRender";
 import MapForm from "./components/MapForm";

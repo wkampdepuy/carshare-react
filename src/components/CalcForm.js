@@ -1,11 +1,7 @@
 import {useState} from "react";
-import CalcTable from './CalcTable.js'
 import Button from 'react-bootstrap/Button';
 import FormGroup from 'react-bootstrap/FormGroup';
 import Form from 'react-bootstrap/Form'
-import SubmitForm from './CalcFormSubmit'
-import {Row, Col} from "react-bootstrap";
-import {InputGroup} from "react-bootstrap";
 import {FormControl} from "react-bootstrap";
 import CalcCards from "./CalcCards";
 
