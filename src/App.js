@@ -16,7 +16,7 @@ function App() {
         <Navbar bg="light" expand="sm">
             <Container className='justify-content-center'>
                 <Navbar.Brand href='#' className='p-1 '>
-                    <a className="p-0 h-100" href="#">
+                    <a className="p-0 h-100">
                         <img src={car} className="h-100" alt=""/>
                     </a>
                 </Navbar.Brand>
