@@ -1,10 +1,10 @@
-from flask import Flask, render_template, request, redirect, jsonify, make_response, get_template_attribute
+from flask import Flask, render_template, request, redirect, jsonify, make_response, send_from_directory
 from datetime import datetime
 from calc import carshare_calculator
 import json
 import time
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='../public', static_url_path='/')
 
 output_columns = ['Service', 'Subscription', 'Plan', 'Car type', 'Kilometer fee', 'Minute fee', 'Fixed rate',
                   'Overtime fee', 'Overmilage fee', 'Package fee', 'Monthly cost', 'Discount', 'Total cost']
@@ -12,8 +12,8 @@ output_columns = ['Service', 'Subscription', 'Plan', 'Car type', 'Kilometer fee'
 
 # @app.route('/')
 # def index():
-#     return render_template("public/index.html")
-#
+#     return send_from_directory(app.static_folder, 'index.html')
+
 
 @app.route('/time')
 def get_current_time():

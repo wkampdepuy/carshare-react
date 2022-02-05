@@ -18,11 +18,12 @@
     "react-number-format": "^4.9.1",
     "react-scripts": "5.0.0",
     "react-spring": "^9.4.1",
-    "web-vitals": "^2.1.2"
+    "web-vitals": "^2.1.2",
+    "yarn": "^1.22.17"
   },
   "scripts": {
-    "start": "react-scripts start && cd api && venv/bin/flask run --no-debugger",
-    "start-api": "cd api && venv/bin/flask run --no-debugger",
+    "start": "react-scripts start",
+    "start-api": "cd api && flask run --no-debugger",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
