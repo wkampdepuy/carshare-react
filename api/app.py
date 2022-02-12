@@ -10,10 +10,9 @@ output_columns = ['Service', 'Subscription', 'Plan', 'Car type', 'Kilometer fee'
                   'Overtime fee', 'Overmilage fee', 'Package fee', 'Monthly cost', 'Discount', 'Total cost']
 
 
-# @app.route('/')
-# def index():
-#     return send_from_directory(app.static_folder, 'index.html')
-
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
 
 @app.route('/time')
 def get_current_time():
