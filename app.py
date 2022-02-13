@@ -13,6 +13,8 @@ output_columns = ['Service', 'Subscription', 'Plan', 'Car type', 'Kilometer fee'
 @app.route('/')
 def index():
     return app.send_static_file('index.html')
+    # return send_from_directory(app.static_folder, 'index.html')
+
 
 @app.route('/time')
 def get_current_time():
@@ -26,6 +28,11 @@ def add_todo():
         todo_data = request.get_json()
         print(todo_data)
     return 'Done', 201
+
+
+@app.errorhandler(404)
+def not_found(e):
+    return app.send_static_file('index.html')
 
 
 # @app.route("/calculator", methods=["GET", "POST"])
