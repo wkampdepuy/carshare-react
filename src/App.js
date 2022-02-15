@@ -2,14 +2,15 @@ import './App.css';
 import './bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
-import React from "react";
+import React, {useState} from "react";
 import CalcForm from './components/CalcForm.js';
 import MapWrapper from "./components/MapRender";
 import MapForm from "./components/MapForm";
 import {Row, Col, Container, Nav, Navbar, NavDropdown} from "react-bootstrap";
 import car from './img/car.svg'
 import {Card} from "react-bootstrap";
-
+import RouteForm from "./components/RouteForm";
+import CompleteForm from "./components/CompleteForm";
 
 function App() {
     return (<div className="App">
@@ -40,30 +41,49 @@ function App() {
             </Container>
         </Navbar>
 
-        <Container>
-            <Row className='d-flex justify-content-center'>
+        {/*<Container>*/}
+        {/*    <Row className='d-flex justify-content-center'>*/}
 
-                <Col sm={8} lg={5} className="m-4">
-                    <Card className='shadow-lg mapform'>
-                        <Card.Header>Enter your destination</Card.Header>
-                        <div className="p-2">
-                            <MapForm/>
-                        </div>
+        {/*        <Col sm={8} lg={5} className="m-4">*/}
+        {/*            <Card className='shadow-lg mapform'>*/}
+        {/*                <Card.Header>Enter your destination</Card.Header>*/}
+        {/*                <div className="p-2">*/}
+        {/*                    <MapForm/>*/}
+        {/*                </div>*/}
 
-                        <MapWrapper/>
-                        <div style={{height: "400px"}} id="map" className="map"></div>
-                    </Card>
+        {/*                <MapWrapper/>*/}
+        {/*                <div style={{height: "400px"}} id="map" className="map"></div>*/}
+        {/*            </Card>*/}
+        {/*        </Col>*/}
+        {/*        <Col sm={8} lg={5} className='m-4'>*/}
+        {/*            <Card className="calcTile shadow-lg">*/}
+        {/*                <Card.Header>Manually enter your trip details</Card.Header>*/}
+        {/*                <Card.Body className='pt-2'>*/}
+        {/*                    <CalcForm/>*/}
+        {/*                </Card.Body>*/}
+
+        {/*            </Card>*/}
+
+
+        {/*        </Col>*/}
+        {/*    </Row>*/}
+
+        {/*</Container>*/}
+
+        <Container fluid="xxl">
+            <Row>
+                <Col className='shadow-lg mapform'>
+
+                    {/*<Row className='border-bottom'>*/}
+                    {/*    <MapForm/>*/}
+                    {/*</Row>*/}
+                    <Row>
+                        <CompleteForm/>
+                    </Row>
                 </Col>
-                <Col sm={8} lg={5} className='m-4'>
-                    <Card className="calcTile shadow-lg">
-                        <Card.Header>Manually enter your trip details</Card.Header>
-                        <Card.Body className='pt-2'>
-                            <CalcForm/>
-                        </Card.Body>
-
-                    </Card>
-
-
+                <Col>
+                    <MapWrapper/>
+                    <div style={{height: "80vh"}} id="map" className="map"></div>
                 </Col>
             </Row>
 
