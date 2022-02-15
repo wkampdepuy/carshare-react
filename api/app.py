@@ -4,7 +4,7 @@ from calc import carshare_calculator
 import json
 import time
 
-app = Flask(__name__, static_folder='public', static_url_path='/')
+app = Flask(__name__, static_folder='../public', static_url_path='/')
 
 output_columns = ['Service', 'Subscription', 'Plan', 'Car type', 'Kilometer fee', 'Minute fee', 'Fixed rate',
                   'Overtime fee', 'Overmilage fee', 'Package fee', 'Monthly cost', 'Discount', 'Total cost']
