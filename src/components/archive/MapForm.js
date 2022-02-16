@@ -1,6 +1,6 @@
 import React, {useState} from "react";
-import {MyMapComponent} from './MapRender'
-import MapDistCalc from "./MapDistCalc";
+import {MyMapComponent} from '../MapRender'
+import MapDistCalc from "../MapDistCalc";
 import Button from 'react-bootstrap/Button'
 import FormGroup from 'react-bootstrap/FormGroup';
 import Form from 'react-bootstrap/Form'

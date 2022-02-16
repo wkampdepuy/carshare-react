@@ -123,7 +123,7 @@ const RouteForm = () => {
                 <Button variant="primary" type="submit" value="Submit" className='d-none'></Button>
             </Form>
 
-            <div className='border-top'>
+            <div className='border-top px-3'>
                 {/*<CalcTable json_table={table}/>*/}
                 <CalcCards json_table={table}/>
             </div>

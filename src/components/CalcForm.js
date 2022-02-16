@@ -4,7 +4,6 @@ import FormGroup from 'react-bootstrap/FormGroup';
 import Form from 'react-bootstrap/Form'
 import {FormControl} from "react-bootstrap";
 import CalcCards from "./CalcCards";
-import MapForm from "./MapForm";
 
 const CalcForm = () => {
     const [kilometers, setKilometers] = useState(78)
@@ -95,7 +94,7 @@ const CalcForm = () => {
             </FormGroup>
 
         </Form>
-        <div className='border-top'>
+        <div className='border-top px-3'>
             {/*<CalcTable json_table={table}/>*/}
             <CalcCards json_table={table}/>
         </div>
